@@ -4,18 +4,6 @@ Prova de conceito de uma aplicação web em Angular que consumindo os serviços 
 
 <br>
 
-## Pré-requisitos
-
-1. Ter Node e NPM instalados na maquina.
-<br>
-
-
-### Base de Dados
-
-- Por se tratar de uma POC, esta API esta utizando um banco NoSQL (MongoDb) no mLab (https://mlab.com).
-<br>
-
-
 ## Guia de instalação
 
 1. Fazer download do arquivo compactado do projeto.
@@ -32,8 +20,27 @@ Prova de conceito de uma aplicação web em Angular que consumindo os serviços 
 1. Via terminal acesse a pasta do projeto após a instalação.
 2. Execute o comando: 
     ```
-    nodemon app 
+    ng serve 
     ```
+3. Abra o navegado de sua preferência e acesse a URL 'http://localhost:4200'
+<br>
+
+## Interfaces
+
+### Tela inicial
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/rjramos70/POC-PU/master/WebContent/images/tela_lista_ofertas_disponiveis.png" width="80%" height="80%">
+</p>
+
+### Lista Funcionários
+
+### Cadastra Funcionário
+
+### Atualiza Funcionário
+
+### Remove Funcionário
+
 <br>
 
 ## Requisitos da API

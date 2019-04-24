@@ -11,7 +11,7 @@
         <caption>Total de Funcionários: {{Funcionarios.length}}</caption>
         <thead class="thead-light">
           <tr>
-            <th scope="row">Id</th>
+            <!-- <th scope="row">Id</th> -->
             <th scope="col">Nome</th>
             <th scope="col" class="text-center">Idade</th>
             <th scope="col">Cargo</th>
@@ -21,7 +21,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let funcionario of Funcionarios">
-            <td>{{funcionario._id}}</td>
+            <!-- <td>{{funcionario._id}}</td> -->
             <td>{{funcionario.nome}}</td>
             <td class="text-center">{{funcionario.idade}}</td>
             <td>{{funcionario.cargo}}</td>
