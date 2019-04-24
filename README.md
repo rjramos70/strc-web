@@ -10,19 +10,11 @@ Prova de conceito de uma aplicação web em Angular que consumindo os serviços 
 2. Descompacte o arquivo.
 3. Via terminal entre na pasta que acabou de ser descompactada.
 4. Execute o comando: 
-    ```
-    npm install
-    ```
-<br>
-
-## Como executar
-
-1. Via terminal acesse a pasta do projeto após a instalação.
-2. Execute o comando: 
+   
     ```
     ng serve 
     ```
-3. Abra o navegado de sua preferência e acesse a URL 'http://localhost:4200'
+5. Abra o navegado de sua preferência e acesse a URL 'http://localhost:4200'
 <br>
 
 ## Interfaces
@@ -30,16 +22,32 @@ Prova de conceito de uma aplicação web em Angular que consumindo os serviços 
 ### Tela inicial
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/rjramos70/POC-PU/master/WebContent/images/tela_lista_ofertas_disponiveis.png" width="80%" height="80%">
+  <img src="https://github.com/rjramos70/strc-web/blob/master/imgs/tela_inicial.png?raw=true" width="80%" height="80%">
 </p>
 
 ### Lista Funcionários
 
+<p align="left">
+  <img src="https://github.com/rjramos70/strc-web/blob/master/imgs/lista_funcionarios.png?raw=true" width="80%" height="80%">
+</p>
+
 ### Cadastra Funcionário
+
+<p align="left">
+  <img src="https://github.com/rjramos70/strc-web/blob/master/imgs/create_funcionario.png?raw=true" width="80%" height="80%">
+</p>
 
 ### Atualiza Funcionário
 
+<p align="left">
+  <img src="https://github.com/rjramos70/strc-web/blob/master/imgs/update_funcionario.png?raw=true" width="80%" height="80%">
+</p>
+
 ### Remove Funcionário
+
+<p align="left">
+  <img src="https://github.com/rjramos70/strc-web/blob/master/imgs/delete_funcionario.png?raw=true" width="80%" height="80%">
+</p>
 
 <br>
 
