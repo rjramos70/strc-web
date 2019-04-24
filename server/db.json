@@ -1,0 +1,16 @@
+{
+    "funcionario":[{
+        "_id": "5cbc0896b640165238812d7e",
+        "idade": 38,
+        "nome": "Maria",
+        "cargo": "Analista de Sistema",
+        "__v": 0
+    },
+    {
+        "_id": "5cbc8aa280abad57a8c94c74",
+        "idade": 75,
+        "nome": "Teste Nome",
+        "cargo": "Teste Cargo",
+        "__v": 0
+    }]
+}

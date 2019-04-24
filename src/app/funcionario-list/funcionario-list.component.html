@@ -1,0 +1,46 @@
+<br>
+
+<div class="container custom-container-2">
+
+  <!-- Caso exista algum funcionário cadastrado -->
+  <div *ngIf="Funcionarios.length !== 0">
+    <h3 class="mb-3 text-center">Lista de Funcionários</h3>
+
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <caption>Total de Funcionários: {{Funcionarios.length}}</caption>
+        <thead class="thead-light">
+          <tr>
+            <th scope="row">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col" class="text-center">Idade</th>
+            <th scope="col">Cargo</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let funcionario of Funcionarios">
+            <td>{{funcionario._id}}</td>
+            <td>{{funcionario.nome}}</td>
+            <td class="text-center">{{funcionario.idade}}</td>
+            <td>{{funcionario.cargo}}</td>
+            <td class="text-center">
+              <span class="edit text-primary" routerLink="/update-funcionario/{{funcionario._id}}">Edit</span>
+            </td>
+            <td class="text-center">
+              <span class="delete text-danger" (click)="deleteFuncionario(funcionario._id)">Delete</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Mensagem quando não houver funcionário na lista -->
+  <div class="no-data text-center" *ngIf="Funcionarios.length == 0">
+      <p>Não existe funcionário cadastrado!</p>
+      <button class="btn btn-outline-primary" routerLink="/create-funcionario">Cadastrar Funcionário</button>
+    </div>
+
+</div>

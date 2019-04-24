@@ -1,0 +1,25 @@
+
+
+<div class="container custom-container">
+    <div class="col-md-12">
+      
+      <h3 class="mb-3 text-center">Atualizar Funcionario</h3>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="funcionarioData.idade" class="form-control" placeholder="Idade">
+      </div>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="funcionarioData.nome" class="form-control" placeholder="Nome">
+      </div>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="funcionarioData.cargo" class="form-control" placeholder="Cargo">
+      </div>
+  
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" (click)="updateFuncionario()">Atualizar</button>
+      </div>
+      
+    </div>
+  </div>
