@@ -19,14 +19,19 @@ export class FuncionarioListComponent implements OnInit {
     this.loadFuncionarios()
   }
 
-  // GET lista de funcionarios
+  /**
+   * Carrega lista de funcionarios
+   */
   loadFuncionarios(){
     return this.restApi.getFuncionarios().subscribe((data: {}) => {
       this.Funcionarios = data;
     });
   }
 
-  // Deleta funcionário 
+  /**
+   * Remove funcionário com base no ID
+   * @param _id 
+   */
   deleteFuncionario(_id){
     if(window.confirm('Tem certeza que quer remover este funcionário?')){
       this.restApi.deleteFuncionario(_id).subscribe(data => {

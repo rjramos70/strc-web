@@ -5,14 +5,15 @@ import { Funcionario } from '../shared/funcionario';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError, map } from 'rxjs/operators';
 
-import { Http, Response } from '@angular/http';
+// import { Http, Response } from '@angular/http';
 
 import { environment } from '../../environments/environment';
-import { httpFactory } from '@angular/http/src/http_module';
+// import { httpFactory } from '@angular/http/src/http_module';
 
-@Injectable({
-  providedIn: 'root'
-})
+/**
+ * Classe de serviço que executa as requisições para os endpoints da API Rest
+ */
+@Injectable({ providedIn: 'root' })
 export class RestApiService {
 
   constructor(private http: HttpClient) { }
@@ -21,7 +22,9 @@ export class RestApiService {
 
   // Métodos CRUD
 
-  // Opções Http 
+  /**
+   * Seta os parametros do header
+   */
   httpOptions = { 
     headers: new HttpHeaders({
       'Content-Type':'application/json',
@@ -29,7 +32,9 @@ export class RestApiService {
     })
   };
 
-  // Faz o fetch da lista dos funcionários
+  /**
+   * Lista todos os funcionários cadastrados
+   */
   getFuncionarios():Observable<Funcionario>{
     return this.http.get<Funcionario>(this.apiURL + '/funcionario')
     .pipe(
@@ -40,7 +45,10 @@ export class RestApiService {
     return null;
   }
 
-  // Faz fetch do funcionário pelo ID
+  /**
+   * Obtem funcionário pelo ID
+   * @param _id 
+   */
   getFuncionario(_id):Observable<Funcionario>{
     return this.http.get<Funcionario>(this.apiURL + '/funcionario/' + _id)
     .pipe(
@@ -49,17 +57,11 @@ export class RestApiService {
     )
   }
 
-  // Cria funcionário
+  /**
+   * Cadastra funcionário
+   * @param funcionario 
+   */
   createFuncionario(funcionario):Observable<Funcionario>{
-    /*
-    console.log('createFuncionario(funcionario)...');
-    console.log('funcionario._id: ' + funcionario._id);
-    console.log('funcionario.nome: ' + funcionario.nome);
-    console.log('funcionario.idade: ' + funcionario.idade);
-    console.log('funcionario.cargo: ' + funcionario.cargo);
-
-    console.log('JSON.stringify(funcionario): ' + JSON.stringify(funcionario));
-    */
     return this.http.post<Funcionario>(this.apiURL + '/funcionario', JSON.stringify(funcionario), this.httpOptions)
     .pipe(
       retry(1),
@@ -67,10 +69,24 @@ export class RestApiService {
     )
   }
 
-  // Atualiza funcionário
+  /**
+   * Pesquisa funcionários com base nos filtros preenchidos
+   * @param funcionario
+   */
+  pesquisar(funcionario):Observable<Funcionario>{
+    return this.http.post<Funcionario>(this.apiURL + '/funcionario/pesquisar', JSON.stringify(funcionario), this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
+  /**
+   * Atualiza funcionário
+   * @param _id 
+   * @param Funcionario 
+   */
   updateFuncionario(_id, funcionario):Observable<Funcionario>{
-    // console.log(' --------------- UPDATE --------------- ');
-    // console.log('id : '+ _id);
     return this.http.put<Funcionario>(this.apiURL + '/funcionario/' + _id + '/update', JSON.stringify(funcionario), this.httpOptions)
     .pipe(
       retry(1),
@@ -78,11 +94,11 @@ export class RestApiService {
     )
   }
 
-  // Deleta funcionário
+  /**
+   * Remove funcionário com base no ID
+   * @param _id 
+   */
   deleteFuncionario(_id){
-    console.log(' --------------- DELETE --------------- ');
-    console.log('id : '+ _id);
-    console.log('URL : '+ this.apiURL + '/funcionario/' + _id)
     return this.http.delete<Funcionario>(this.apiURL + '/funcionario/' + _id)
     .pipe(
       retry(1),
@@ -90,9 +106,11 @@ export class RestApiService {
     )
   }
 
-  // Error handling
+  /**
+   * Error handling
+   * @param error 
+   */
   handleError(error){
-    
     let errorMessage = '';
     if(error.error instanceof ErrorEvent){
       errorMessage = error.error.message;

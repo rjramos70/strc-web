@@ -8,9 +8,10 @@ import { FuncionarioListComponent } from './funcionario-list/funcionario-list.co
 const routes: Routes = [
   {path:'', pathMatch:'full', redirectTo:'create-funcionario'},
   {path:'create-funcionario', component: FuncionarioCreateComponent},
-  {path:'funcionario-details/:_id', component: FuncionarioDetailsComponent},
+  {path:'funcionario-details', component: FuncionarioDetailsComponent},
   {path:'update-funcionario/:_id', component: FuncionarioUpdateComponent},
-  {path:'funcionario-list', component: FuncionarioListComponent}
+  {path:'funcionario-list', component: FuncionarioListComponent},
+  {path:'test', component: FuncionarioListComponent}
 ];
 
 @NgModule({

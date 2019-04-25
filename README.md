@@ -49,55 +49,45 @@ Prova de conceito de uma aplicação web em Angular que consumindo os serviços 
   <img src="https://github.com/rjramos70/strc-web/blob/master/imgs/delete_funcionario.png?raw=true" width="80%" height="80%">
 </p>
 
+### Pesquisa Funcionário
+
+<p align="left">
+  <img src="https://github.com/rjramos70/strc-web/blob/master/imgs/tela_pesquisar1.png?raw=true" width="80%" height="80%">
+</p>
+<p align="left">
+  <img src="https://github.com/rjramos70/strc-web/blob/master/imgs/tela_pesquisar2.png?raw=true" width="80%" height="80%">
+</p>
+<p align="left">
+  <img src="https://github.com/rjramos70/strc-web/blob/master/imgs/tela_pesquisar3.png?raw=true" width="80%" height="80%">
+</p>
+
 <br>
 
-## Requisitos da API
+## Requisitos da Aplicação
 
-Esta API tem os seguintes métodos implementados:
+Esta aplicação web tem os seguintes métodos implementados:
 
-- GET
-
-    - listAll: método que retorna a lista de todos os funcionários cadastrados.
-    - getById: método que retorna o funcioário com base no ID passado como parametro na URL.
-
-
-- PUT
-
-    - update: método que atualizado o funcioário com base no ID passado como parâmetro na URL, além de nome, idade e cargo passado no corpo da requisição.
-
-
-- POST  
-
-    - create: método responsável pela criação do funcionário, onde no corpo da requisição devemos enviar os campos nome, idade e cargo.
-
-
-- DELETE
-
-    - delete: métdo que remove o funcionário com base no ID passado na URL. 
-<br>
-
-**OBSERVAÇÃO**: _Como se trata de uma POC, não foi implementado criptografia e nem camada de autenticação._
-<br>
+- Tela de inclusão de um funcionário, no qual quando o usuário preencher e clicar no botão 'Cadastrar, o formulário faz uma requisição POST para API Rest do projeto 'strc' criada para inserir um novo registro no banco de dados.
+- Tela de pesquisa onde o usuário pode realizar, a escolha de filtros, pesquisa de funcionário(s), visualizando os resultado e uma lista de funcionários com as características desejadas logo abaixo do formulário de pesquisa. 
+- Na tela de listagem de funcionários, podemos direcionar para a tela de cadastro, quando a lista estiver vazia, caso contrário temos as opções de 'Edit' e 'Delete'. 
 <br>
 
 ## Linguagem de programação
 
 Esta APi foi desenvolvida com Node utilizando os seguintes pacotes:
 
-* body-parser : 1.18.3
-* consign : 0.1.6
-* cors :  2.8.5
-* express :  4.16.4
-* mongoose :  5.5.2
-* nodemon :  1.18.11 
+* Pacote Angular 7
+* bootstrap 4.3.1
+* core-js 2.5.4
+* jquery 3.4.0
+* node-rest-client 3.1.0
+* popper 1.0.1
+* rxjs 6.3.3
+* tslib 1.9.0
+* zone.js 0.8.26
+
 <br>
 
-## Melhorias Futuras na API
-
-1. Implementação da camada de autenticação com pacote 'jsonwebtoken'.
-2. Implementação de criptografia com o pacote 'bcryptjs'.
-3. Implementação da camada de persistência com 'sequelize'.
-<br>
 
 ## Autoria e contribuições
 

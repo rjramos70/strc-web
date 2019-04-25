@@ -24,11 +24,13 @@ export class FuncionarioUpdateComponent implements OnInit {
     })
   }
 
-  // Atualizar dados do funcionário
+  /**
+   * Atualizar dados do funcionário
+   * @param _id 
+   */
   updateFuncionario(_id){
     if(window.confirm('Tem certeza que deseja atualizar este funcionário?')){
       this.restApi.updateFuncionario(this._id, this.funcionarioData).subscribe(data => {
-        console.log('Funcionário atualizado com sucesso, redirecionar para /funcionario-list');
         this.router.navigate(['/funcionario-list']);
       })
     }

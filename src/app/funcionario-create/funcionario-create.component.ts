@@ -19,8 +19,11 @@ export class FuncionarioCreateComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Cadastra funcionário
+   * @param dataFuncionario 
+   */
   addFuncionario(dataFuncionario){
-    // console.log('Funcionario: ' + JSON.stringify(this.funcionarioDetails));
     this.restApi.createFuncionario(this.funcionarioDetails).subscribe((data:{}) => {
       this.router.navigate(['/funcionario-list'])
     })
