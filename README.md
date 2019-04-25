@@ -9,12 +9,19 @@ Prova de conceito de uma aplicação web em Angular que consumindo os serviços 
 1. Fazer download do arquivo compactado do projeto.
 2. Descompacte o arquivo.
 3. Via terminal entre na pasta que acabou de ser descompactada.
-4. Execute o comando: 
+4. Entrar na pasta que acabou de ser criada e executar o seguinte comando via terminal para instalar os pacotes:
+
+    ```
+    npm install 
+    ```
+
+5. Ao término da instalação, aida via terminal e dentro da pasta do projeto, execute o comando para iniciar a aplicação: 
    
     ```
     ng serve 
     ```
-5. Abra o navegado de sua preferência e acesse a URL 'http://localhost:4200'
+
+6. Para testar a aplicação, abra o navegado de sua preferência e acesse a URL 'http://localhost:4200'
 <br>
 
 ## Interfaces
